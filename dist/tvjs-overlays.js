@@ -1,5 +1,5 @@
 /*!
- * TVJS Overlays - v0.5.0 - Fri Jul 09 2021
+ * TVJS Overlays - v0.5.0 - Sat Nov 19 2022
  *     https://github.com/tvjsx/trading-vue-js
  *     Copyright (c) 2020 c451 Code's All Right;
  *     Licensed under the MIT license
@@ -16,15 +16,15 @@
 		exports["TvjsOverlays"] = factory(require("trading-vue-js"));
 	else
 		root["TvjsOverlays"] = factory(root["trading-vue-js"]);
-})(self, function(__WEBPACK_EXTERNAL_MODULE__954__) {
+})(self, (__WEBPACK_EXTERNAL_MODULE__252__) => {
 return /******/ (() => { // webpackBootstrap
 /******/ 	"use strict";
 /******/ 	var __webpack_modules__ = ({
 
-/***/ 954:
+/***/ 252:
 /***/ ((module) => {
 
-module.exports = __WEBPACK_EXTERNAL_MODULE__954__;
+module.exports = __WEBPACK_EXTERNAL_MODULE__252__;
 
 /***/ })
 
@@ -132,7 +132,7 @@ __webpack_require__.d(__webpack_exports__, {
 });
 
 // EXTERNAL MODULE: external "trading-vue-js"
-var external_trading_vue_js_ = __webpack_require__(954);
+var external_trading_vue_js_ = __webpack_require__(252);
 ;// CONCATENATED MODULE: ./node_modules/babel-loader/lib/index.js!./node_modules/vue-loader/lib/index.js??vue-loader-options!./src/overlays/ALMA/ALMA.vue?vue&type=script&lang=js&
 
 /* harmony default export */ const ALMAvue_type_script_lang_js_ = ({
@@ -190,20 +190,19 @@ var external_trading_vue_js_ = __webpack_require__(954);
 // This module is a runtime utility for cleaner component module output and will
 // be included in the final webpack user bundle.
 
-function normalizeComponent (
+function normalizeComponent(
   scriptExports,
   render,
   staticRenderFns,
   functionalTemplate,
   injectStyles,
   scopeId,
-  moduleIdentifier, /* server only */
+  moduleIdentifier /* server only */,
   shadowMode /* vue-cli only */
 ) {
   // Vue.extend constructor export interop
-  var options = typeof scriptExports === 'function'
-    ? scriptExports.options
-    : scriptExports
+  var options =
+    typeof scriptExports === 'function' ? scriptExports.options : scriptExports
 
   // render functions
   if (render) {
@@ -223,7 +222,8 @@ function normalizeComponent (
   }
 
   var hook
-  if (moduleIdentifier) { // server build
+  if (moduleIdentifier) {
+    // server build
     hook = function (context) {
       // 2.3 injection
       context =
@@ -249,11 +249,11 @@ function normalizeComponent (
   } else if (injectStyles) {
     hook = shadowMode
       ? function () {
-        injectStyles.call(
-          this,
-          (options.functional ? this.parent : this).$root.$options.shadowRoot
-        )
-      }
+          injectStyles.call(
+            this,
+            (options.functional ? this.parent : this).$root.$options.shadowRoot
+          )
+        }
       : injectStyles
   }
 
@@ -264,16 +264,14 @@ function normalizeComponent (
       options._injectStyles = hook
       // register for functional component in vue file
       var originalRender = options.render
-      options.render = function renderWithStyleInjection (h, context) {
+      options.render = function renderWithStyleInjection(h, context) {
         hook.call(context)
         return originalRender(h, context)
       }
     } else {
       // inject component registration as beforeCreate hook
       var existing = options.beforeCreate
-      options.beforeCreate = existing
-        ? [].concat(existing, hook)
-        : [hook]
+      options.beforeCreate = existing ? [].concat(existing, hook) : [hook]
     }
   }
 
@@ -302,9 +300,6 @@ var component = normalizeComponent(
   
 )
 
-/* hot reload */
-if (false) { var api; }
-component.options.__file = "src/overlays/ALMA/ALMA.vue"
 /* harmony default export */ const ALMA = (component.exports);
 ;// CONCATENATED MODULE: ./node_modules/babel-loader/lib/index.js!./node_modules/vue-loader/lib/index.js??vue-loader-options!./src/overlays/ATR/ATR.vue?vue&type=script&lang=js&
 
@@ -367,9 +362,6 @@ var ATR_component = normalizeComponent(
   
 )
 
-/* hot reload */
-if (false) { var ATR_api; }
-ATR_component.options.__file = "src/overlays/ATR/ATR.vue"
 /* harmony default export */ const ATR = (ATR_component.exports);
 ;// CONCATENATED MODULE: ./node_modules/babel-loader/lib/index.js!./node_modules/vue-loader/lib/index.js??vue-loader-options!./src/overlays/ATRp/ATRp.vue?vue&type=script&lang=js&
 
@@ -432,17 +424,11 @@ var ATRp_component = normalizeComponent(
   
 )
 
-/* hot reload */
-if (false) { var ATRp_api; }
-ATRp_component.options.__file = "src/overlays/ATRp/ATRp.vue"
 /* harmony default export */ const ATRp = (ATRp_component.exports);
 ;// CONCATENATED MODULE: ./node_modules/babel-loader/lib/index.js!./node_modules/vue-loader/lib/index.js??vue-loader-options!./src/overlays/Area51/Area51.vue?vue&type=script&lang=js&
 function _createForOfIteratorHelper(o, allowArrayLike) { var it = typeof Symbol !== "undefined" && o[Symbol.iterator] || o["@@iterator"]; if (!it) { if (Array.isArray(o) || (it = _unsupportedIterableToArray(o)) || allowArrayLike && o && typeof o.length === "number") { if (it) o = it; var i = 0; var F = function F() {}; return { s: F, n: function n() { if (i >= o.length) return { done: true }; return { done: false, value: o[i++] }; }, e: function e(_e) { throw _e; }, f: F }; } throw new TypeError("Invalid attempt to iterate non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); } var normalCompletion = true, didErr = false, err; return { s: function s() { it = it.call(o); }, n: function n() { var step = it.next(); normalCompletion = step.done; return step; }, e: function e(_e2) { didErr = true; err = _e2; }, f: function f() { try { if (!normalCompletion && it["return"] != null) it["return"](); } finally { if (didErr) throw err; } } }; }
-
 function _unsupportedIterableToArray(o, minLen) { if (!o) return; if (typeof o === "string") return _arrayLikeToArray(o, minLen); var n = Object.prototype.toString.call(o).slice(8, -1); if (n === "Object" && o.constructor) n = o.constructor.name; if (n === "Map" || n === "Set") return Array.from(o); if (n === "Arguments" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return _arrayLikeToArray(o, minLen); }
-
 function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len = arr.length; for (var i = 0, arr2 = new Array(len); i < len; i++) { arr2[i] = arr[i]; } return arr2; }
-
 
 /* harmony default export */ const Area51vue_type_script_lang_js_ = ({
   name: 'Area51',
@@ -460,15 +446,14 @@ function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len 
       var data = this.$props.data;
       var grd = ctx.createLinearGradient(0, 0, 0, layout.height);
       grd.addColorStop(0, this.back1);
-      grd.addColorStop(1, this.back2); // Line
+      grd.addColorStop(1, this.back2);
 
+      // Line
       ctx.lineWidth = this.line_width;
       ctx.strokeStyle = this.color;
       ctx.beginPath();
-
       var _iterator = _createForOfIteratorHelper(data),
-          _step;
-
+        _step;
       try {
         for (_iterator.s(); !(_step = _iterator.n()).done;) {
           var p = _step.value;
@@ -481,26 +466,21 @@ function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len 
       } finally {
         _iterator.f();
       }
+      ctx.stroke();
 
-      ctx.stroke(); // Area
-
+      // Area
       ctx.fillStyle = grd;
       ctx.beginPath();
       var p0 = (data[0] || [])[0];
       var pN = (data[data.length - 1] || [])[0];
       ctx.lineTo(layout.t2screen(p0), layout.height);
-
       var _iterator2 = _createForOfIteratorHelper(data),
-          _step2;
-
+        _step2;
       try {
         for (_iterator2.s(); !(_step2 = _iterator2.n()).done;) {
           var p = _step2.value;
-
           var _x = layout.t2screen(p[0]);
-
           var _y = layout.$2screen(p[1]);
-
           ctx.lineTo(_x, _y);
         }
       } catch (err) {
@@ -508,7 +488,6 @@ function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len 
       } finally {
         _iterator2.f();
       }
-
       ctx.lineTo(layout.t2screen(pN), layout.height);
       ctx.fill();
     },
@@ -562,9 +541,6 @@ var Area51_component = normalizeComponent(
   
 )
 
-/* hot reload */
-if (false) { var Area51_api; }
-Area51_component.options.__file = "src/overlays/Area51/Area51.vue"
 /* harmony default export */ const Area51 = (Area51_component.exports);
 ;// CONCATENATED MODULE: ./node_modules/babel-loader/lib/index.js!./node_modules/vue-loader/lib/index.js??vue-loader-options!./src/overlays/BB/BB.vue?vue&type=script&lang=js&
 
@@ -633,9 +609,6 @@ var BB_component = normalizeComponent(
   
 )
 
-/* hot reload */
-if (false) { var BB_api; }
-BB_component.options.__file = "src/overlays/BB/BB.vue"
 /* harmony default export */ const BB = (BB_component.exports);
 ;// CONCATENATED MODULE: ./node_modules/babel-loader/lib/index.js!./node_modules/vue-loader/lib/index.js??vue-loader-options!./src/overlays/BBW/BBW.vue?vue&type=script&lang=js&
 
@@ -702,9 +675,6 @@ var BBW_component = normalizeComponent(
   
 )
 
-/* hot reload */
-if (false) { var BBW_api; }
-BBW_component.options.__file = "src/overlays/BBW/BBW.vue"
 /* harmony default export */ const BBW = (BBW_component.exports);
 ;// CONCATENATED MODULE: ./node_modules/babel-loader/lib/index.js!./node_modules/vue-loader/lib/index.js??vue-loader-options!./src/overlays/CCI/CCI.vue?vue&type=script&lang=js&
 
@@ -771,9 +741,6 @@ var CCI_component = normalizeComponent(
   
 )
 
-/* hot reload */
-if (false) { var CCI_api; }
-CCI_component.options.__file = "src/overlays/CCI/CCI.vue"
 /* harmony default export */ const CCI = (CCI_component.exports);
 ;// CONCATENATED MODULE: ./node_modules/babel-loader/lib/index.js!./node_modules/vue-loader/lib/index.js??vue-loader-options!./src/overlays/CMO/CMO.vue?vue&type=script&lang=js&
 
@@ -836,9 +803,6 @@ var CMO_component = normalizeComponent(
   
 )
 
-/* hot reload */
-if (false) { var CMO_api; }
-CMO_component.options.__file = "src/overlays/CMO/CMO.vue"
 /* harmony default export */ const CMO = (CMO_component.exports);
 ;// CONCATENATED MODULE: ./node_modules/babel-loader/lib/index.js!./node_modules/vue-loader/lib/index.js??vue-loader-options!./src/overlays/COG/COG.vue?vue&type=script&lang=js&
 
@@ -901,17 +865,11 @@ var COG_component = normalizeComponent(
   
 )
 
-/* hot reload */
-if (false) { var COG_api; }
-COG_component.options.__file = "src/overlays/COG/COG.vue"
 /* harmony default export */ const COG = (COG_component.exports);
 ;// CONCATENATED MODULE: ./node_modules/babel-loader/lib/index.js!./node_modules/vue-loader/lib/index.js??vue-loader-options!./src/overlays/DHistogram/DHistogram.vue?vue&type=script&lang=js&
 function DHistogramvue_type_script_lang_js_createForOfIteratorHelper(o, allowArrayLike) { var it = typeof Symbol !== "undefined" && o[Symbol.iterator] || o["@@iterator"]; if (!it) { if (Array.isArray(o) || (it = DHistogramvue_type_script_lang_js_unsupportedIterableToArray(o)) || allowArrayLike && o && typeof o.length === "number") { if (it) o = it; var i = 0; var F = function F() {}; return { s: F, n: function n() { if (i >= o.length) return { done: true }; return { done: false, value: o[i++] }; }, e: function e(_e) { throw _e; }, f: F }; } throw new TypeError("Invalid attempt to iterate non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); } var normalCompletion = true, didErr = false, err; return { s: function s() { it = it.call(o); }, n: function n() { var step = it.next(); normalCompletion = step.done; return step; }, e: function e(_e2) { didErr = true; err = _e2; }, f: function f() { try { if (!normalCompletion && it["return"] != null) it["return"](); } finally { if (didErr) throw err; } } }; }
-
 function DHistogramvue_type_script_lang_js_unsupportedIterableToArray(o, minLen) { if (!o) return; if (typeof o === "string") return DHistogramvue_type_script_lang_js_arrayLikeToArray(o, minLen); var n = Object.prototype.toString.call(o).slice(8, -1); if (n === "Object" && o.constructor) n = o.constructor.name; if (n === "Map" || n === "Set") return Array.from(o); if (n === "Arguments" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return DHistogramvue_type_script_lang_js_arrayLikeToArray(o, minLen); }
-
 function DHistogramvue_type_script_lang_js_arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len = arr.length; for (var i = 0, arr2 = new Array(len); i < len; i++) { arr2[i] = arr[i]; } return arr2; }
-
 
 /* harmony default export */ const DHistogramvue_type_script_lang_js_ = ({
   name: "DHistogram",
@@ -939,13 +897,12 @@ function DHistogramvue_type_script_lang_js_arrayLikeToArray(arr, len) { if (len 
       ctx.strokeStyle = this.color;
       var layout = this.$props.layout;
       var base = layout.$2screen(0) + 0.5;
-      var off = this.hist_width % 2 ? 0 : 0.5; // Color changed
+      var off = this.hist_width % 2 ? 0 : 0.5;
 
+      // Color changed
       var changed = false;
-
       var _iterator = DHistogramvue_type_script_lang_js_createForOfIteratorHelper(this.$props.data),
-          _step;
-
+        _step;
       try {
         for (_iterator.s(); !(_step = _iterator.n()).done;) {
           var p = _step.value;
@@ -954,7 +911,6 @@ function DHistogramvue_type_script_lang_js_arrayLikeToArray(arr, len) { if (len 
           var x = layout.t2screen(p[0]) - off;
           var y1 = layout.$2screen(pos_value) - 0.5;
           var y2 = layout.$2screen(neg_value) - 0.5;
-
           if (pos_value > this.threshold_size) {
             ctx.strokeStyle = this.pos_color;
             ctx.beginPath();
@@ -962,7 +918,6 @@ function DHistogramvue_type_script_lang_js_arrayLikeToArray(arr, len) { if (len 
             ctx.lineTo(x, y1);
             ctx.stroke();
           }
-
           if (neg_value < -this.threshold_size) {
             ctx.strokeStyle = this.neg_color;
             ctx.beginPath();
@@ -1036,9 +991,6 @@ var DHistogram_component = normalizeComponent(
   
 )
 
-/* hot reload */
-if (false) { var DHistogram_api; }
-DHistogram_component.options.__file = "src/overlays/DHistogram/DHistogram.vue"
 /* harmony default export */ const DHistogram = (DHistogram_component.exports);
 ;// CONCATENATED MODULE: ./node_modules/babel-loader/lib/index.js!./node_modules/vue-loader/lib/index.js??vue-loader-options!./src/overlays/DMI/DMI.vue?vue&type=script&lang=js&
 
@@ -1105,9 +1057,6 @@ var DMI_component = normalizeComponent(
   
 )
 
-/* hot reload */
-if (false) { var DMI_api; }
-DMI_component.options.__file = "src/overlays/DMI/DMI.vue"
 /* harmony default export */ const DMI = (DMI_component.exports);
 ;// CONCATENATED MODULE: ./node_modules/babel-loader/lib/index.js!./node_modules/vue-loader/lib/index.js??vue-loader-options!./src/overlays/EMA/EMA.vue?vue&type=script&lang=js&
 
@@ -1170,9 +1119,6 @@ var EMA_component = normalizeComponent(
   
 )
 
-/* hot reload */
-if (false) { var EMA_api; }
-EMA_component.options.__file = "src/overlays/EMA/EMA.vue"
 /* harmony default export */ const EMA = (EMA_component.exports);
 ;// CONCATENATED MODULE: ./node_modules/babel-loader/lib/index.js!./node_modules/vue-loader/lib/index.js??vue-loader-options!./src/overlays/HMA/HMA.vue?vue&type=script&lang=js&
 
@@ -1235,17 +1181,11 @@ var HMA_component = normalizeComponent(
   
 )
 
-/* hot reload */
-if (false) { var HMA_api; }
-HMA_component.options.__file = "src/overlays/HMA/HMA.vue"
 /* harmony default export */ const HMA = (HMA_component.exports);
 ;// CONCATENATED MODULE: ./node_modules/babel-loader/lib/index.js!./node_modules/vue-loader/lib/index.js??vue-loader-options!./src/overlays/Histogram/Histogram.vue?vue&type=script&lang=js&
 function Histogramvue_type_script_lang_js_createForOfIteratorHelper(o, allowArrayLike) { var it = typeof Symbol !== "undefined" && o[Symbol.iterator] || o["@@iterator"]; if (!it) { if (Array.isArray(o) || (it = Histogramvue_type_script_lang_js_unsupportedIterableToArray(o)) || allowArrayLike && o && typeof o.length === "number") { if (it) o = it; var i = 0; var F = function F() {}; return { s: F, n: function n() { if (i >= o.length) return { done: true }; return { done: false, value: o[i++] }; }, e: function e(_e) { throw _e; }, f: F }; } throw new TypeError("Invalid attempt to iterate non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); } var normalCompletion = true, didErr = false, err; return { s: function s() { it = it.call(o); }, n: function n() { var step = it.next(); normalCompletion = step.done; return step; }, e: function e(_e2) { didErr = true; err = _e2; }, f: function f() { try { if (!normalCompletion && it["return"] != null) it["return"](); } finally { if (didErr) throw err; } } }; }
-
 function Histogramvue_type_script_lang_js_unsupportedIterableToArray(o, minLen) { if (!o) return; if (typeof o === "string") return Histogramvue_type_script_lang_js_arrayLikeToArray(o, minLen); var n = Object.prototype.toString.call(o).slice(8, -1); if (n === "Object" && o.constructor) n = o.constructor.name; if (n === "Map" || n === "Set") return Array.from(o); if (n === "Arguments" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return Histogramvue_type_script_lang_js_arrayLikeToArray(o, minLen); }
-
 function Histogramvue_type_script_lang_js_arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len = arr.length; for (var i = 0, arr2 = new Array(len); i < len; i++) { arr2[i] = arr[i]; } return arr2; }
-
 
 /* harmony default export */ const Histogramvue_type_script_lang_js_ = ({
   name: 'Histogram',
@@ -1264,36 +1204,31 @@ function Histogramvue_type_script_lang_js_arrayLikeToArray(arr, len) { if (len =
       ctx.beginPath();
       var layout = this.$props.layout;
       var base = layout.$2screen(0) + 0.5;
-      var off = this.line_width % 2 ? 0 : 0.5; // Color changed
+      var off = this.line_width % 2 ? 0 : 0.5;
 
+      // Color changed
       var changed = false;
-
       var _iterator = Histogramvue_type_script_lang_js_createForOfIteratorHelper(this.$props.data),
-          _step;
-
+        _step;
       try {
         for (_iterator.s(); !(_step = _iterator.n()).done;) {
           var p = _step.value;
           var x = layout.t2screen(p[0]) - off;
           var y = layout.$2screen(p[1]) - 0.5;
           var _changed = false;
-
           if (p[2]) {
             if (ctx.strokeStyle !== p[2]) {
               ctx.stroke();
               _changed = true;
             }
-
             ctx.strokeStyle = p[2];
           } else {
             if (ctx.strokeStyle !== this.color) {
               ctx.stroke();
               _changed = true;
             }
-
             ctx.strokeStyle = this.color;
           }
-
           if (_changed) ctx.beginPath();
           ctx.moveTo(x, base);
           ctx.lineTo(x, y);
@@ -1303,7 +1238,6 @@ function Histogramvue_type_script_lang_js_arrayLikeToArray(arr, len) { if (len =
       } finally {
         _iterator.f();
       }
-
       ctx.stroke();
     },
     use_for: function use_for() {
@@ -1311,11 +1245,9 @@ function Histogramvue_type_script_lang_js_arrayLikeToArray(arr, len) { if (len =
     },
     legend: function legend(values) {
       var x = values[1];
-
       if (typeof x === "number") {
         x = x.toFixed(Math.abs(x) > 0.001 ? 4 : 8);
       }
-
       return [{
         value: x,
         color: values[2] || this.color
@@ -1362,12 +1294,10 @@ var Histogram_component = normalizeComponent(
   
 )
 
-/* hot reload */
-if (false) { var Histogram_api; }
-Histogram_component.options.__file = "src/overlays/Histogram/Histogram.vue"
 /* harmony default export */ const Histogram = (Histogram_component.exports);
 ;// CONCATENATED MODULE: ./node_modules/babel-loader/lib/index.js!./node_modules/vue-loader/lib/index.js??vue-loader-options!./src/overlays/Ichi/Ichi.vue?vue&type=script&lang=js&
 // Cloud renderer. (Ichimoku)
+
 
 /* harmony default export */ const Ichivue_type_script_lang_js_ = ({
   name: 'Ichi',
@@ -1382,22 +1312,22 @@ Histogram_component.options.__file = "src/overlays/Histogram/Histogram.vue"
     },
     draw: function draw(ctx) {
       ctx.lineWidth = this.line_width;
-
       for (var i = 0; i < this.$props.data.length - 1; i++) {
         var p1 = this.mapp(this.$props.data[i]);
         var p2 = this.mapp(this.$props.data[i + 1]);
         if (!p2) continue;
         if (p1.y1 !== p1.y1) continue; // Fix NaN
-        // Background
 
+        // Background
         ctx.beginPath();
         ctx.fillStyle = p1.y1 < p1.y2 ? this.back1 : this.back2;
         ctx.moveTo(p1.x, p1.y1);
         ctx.lineTo(p2.x + 0.1, p2.y1);
         ctx.lineTo(p2.x + 0.1, p2.y2);
         ctx.lineTo(p1.x, p1.y2);
-        ctx.fill(); // Lines
+        ctx.fill();
 
+        // Lines
         if (!this.draw_lines) continue;
         ctx.beginPath();
         ctx.strokeStyle = this.color1;
@@ -1512,17 +1442,11 @@ var Ichi_component = normalizeComponent(
   
 )
 
-/* hot reload */
-if (false) { var Ichi_api; }
-Ichi_component.options.__file = "src/overlays/Ichi/Ichi.vue"
 /* harmony default export */ const Ichi = (Ichi_component.exports);
 ;// CONCATENATED MODULE: ./node_modules/babel-loader/lib/index.js!./node_modules/vue-loader/lib/index.js??vue-loader-options!./src/overlays/Ichimoku/Ichimoku.vue?vue&type=script&lang=js&
 function Ichimokuvue_type_script_lang_js_createForOfIteratorHelper(o, allowArrayLike) { var it = typeof Symbol !== "undefined" && o[Symbol.iterator] || o["@@iterator"]; if (!it) { if (Array.isArray(o) || (it = Ichimokuvue_type_script_lang_js_unsupportedIterableToArray(o)) || allowArrayLike && o && typeof o.length === "number") { if (it) o = it; var i = 0; var F = function F() {}; return { s: F, n: function n() { if (i >= o.length) return { done: true }; return { done: false, value: o[i++] }; }, e: function e(_e) { throw _e; }, f: F }; } throw new TypeError("Invalid attempt to iterate non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); } var normalCompletion = true, didErr = false, err; return { s: function s() { it = it.call(o); }, n: function n() { var step = it.next(); normalCompletion = step.done; return step; }, e: function e(_e2) { didErr = true; err = _e2; }, f: function f() { try { if (!normalCompletion && it["return"] != null) it["return"](); } finally { if (didErr) throw err; } } }; }
-
 function Ichimokuvue_type_script_lang_js_unsupportedIterableToArray(o, minLen) { if (!o) return; if (typeof o === "string") return Ichimokuvue_type_script_lang_js_arrayLikeToArray(o, minLen); var n = Object.prototype.toString.call(o).slice(8, -1); if (n === "Object" && o.constructor) n = o.constructor.name; if (n === "Map" || n === "Set") return Array.from(o); if (n === "Arguments" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return Ichimokuvue_type_script_lang_js_arrayLikeToArray(o, minLen); }
-
 function Ichimokuvue_type_script_lang_js_arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len = arr.length; for (var i = 0, arr2 = new Array(len); i < len; i++) { arr2[i] = arr[i]; } return arr2; }
-
 //Ichimoku Indicator Overlay. Expected Format: [ <timestamp>, <ConversionLine>, <BaseLine>, <Lead1>, <Lead2>, <Lagging> ]
 
 /* harmony default export */ const Ichimokuvue_type_script_lang_js_ = ({
@@ -1622,18 +1546,14 @@ function Ichimokuvue_type_script_lang_js_arrayLikeToArray(arr, len) { if (len ==
       var subdata = this.$props.data.slice(0, propsSub.length);
       var subdataSenkouSpan = this.$props.data.slice(0, propsSub.length + this.offset);
       var subdataChinkou = this.$props.data.slice(0, propsSub.length - this.offset);
-
       if (this.showFillKumo) {
         this.ctxFillKumo.beginPath();
         var ind = 0;
-
         var _iterator = Ichimokuvue_type_script_lang_js_createForOfIteratorHelper(subdataSenkouSpan),
-            _step;
-
+          _step;
         try {
           for (_iterator.s(); !(_step = _iterator.n()).done;) {
             var currItem = _step.value;
-
             if (ind > 1) {
               var p1 = this.map_senkou_span_values(subdataSenkouSpan[ind - 1]);
               var p2 = this.map_senkou_span_values(currItem);
@@ -1642,16 +1562,13 @@ function Ichimokuvue_type_script_lang_js_arrayLikeToArray(arr, len) { if (len ==
               this.ctxSenkouSpanB.lineTo(p2.x + 0.1, p2.senkouSpanA);
               this.ctxSenkouSpanB.lineTo(p2.x + 0.1, p2.senkouSpanB);
               this.ctxSenkouSpanB.lineTo(p1.x, p1.senkouSpanB);
-
               if (p1.senkouSpanA >= p1.senkouSpanB) {
                 this.ctxSenkouSpanB.fillStyle = this.kumo_down_color;
               } else {
                 this.ctxSenkouSpanB.fillStyle = this.kumo_up_color;
               }
-
               this.ctxSenkouSpanB.fill();
             }
-
             ind++;
           }
         } catch (err) {
@@ -1659,16 +1576,12 @@ function Ichimokuvue_type_script_lang_js_arrayLikeToArray(arr, len) { if (len ==
         } finally {
           _iterator.f();
         }
-
         this.ctxSenkouSpanB.stroke();
       }
-
       if (this.showTenkan) {
         this.ctxTenkan.beginPath();
-
         var _iterator2 = Ichimokuvue_type_script_lang_js_createForOfIteratorHelper(subdata),
-            _step2;
-
+          _step2;
         try {
           for (_iterator2.s(); !(_step2 = _iterator2.n()).done;) {
             var pTenkan = _step2.value;
@@ -1681,16 +1594,12 @@ function Ichimokuvue_type_script_lang_js_arrayLikeToArray(arr, len) { if (len ==
         } finally {
           _iterator2.f();
         }
-
         this.ctxTenkan.stroke();
       }
-
       if (this.showKijun) {
         this.ctxKijun.beginPath();
-
         var _iterator3 = Ichimokuvue_type_script_lang_js_createForOfIteratorHelper(subdata),
-            _step3;
-
+          _step3;
         try {
           for (_iterator3.s(); !(_step3 = _iterator3.n()).done;) {
             var pKijun = _step3.value;
@@ -1703,16 +1612,12 @@ function Ichimokuvue_type_script_lang_js_arrayLikeToArray(arr, len) { if (len ==
         } finally {
           _iterator3.f();
         }
-
         this.ctxKijun.stroke();
       }
-
       if (this.showSenkouSpanA) {
         this.ctxSenkouSpanA.beginPath();
-
         var _iterator4 = Ichimokuvue_type_script_lang_js_createForOfIteratorHelper(subdataSenkouSpan),
-            _step4;
-
+          _step4;
         try {
           for (_iterator4.s(); !(_step4 = _iterator4.n()).done;) {
             var pSenkouSpanA = _step4.value;
@@ -1725,16 +1630,12 @@ function Ichimokuvue_type_script_lang_js_arrayLikeToArray(arr, len) { if (len ==
         } finally {
           _iterator4.f();
         }
-
         this.ctxSenkouSpanA.stroke();
       }
-
       if (this.colorSenkouSpanB) {
         this.ctxSenkouSpanB.beginPath();
-
         var _iterator5 = Ichimokuvue_type_script_lang_js_createForOfIteratorHelper(subdataSenkouSpan),
-            _step5;
-
+          _step5;
         try {
           for (_iterator5.s(); !(_step5 = _iterator5.n()).done;) {
             var pSenkouSpanB = _step5.value;
@@ -1747,16 +1648,12 @@ function Ichimokuvue_type_script_lang_js_arrayLikeToArray(arr, len) { if (len ==
         } finally {
           _iterator5.f();
         }
-
         this.ctxSenkouSpanB.stroke();
       }
-
       if (this.showChinkou) {
         this.ctxChinkou.beginPath();
-
         var _iterator6 = Ichimokuvue_type_script_lang_js_createForOfIteratorHelper(subdataChinkou),
-            _step6;
-
+          _step6;
         try {
           for (_iterator6.s(); !(_step6 = _iterator6.n()).done;) {
             var pChikou = _step6.value;
@@ -1769,7 +1666,6 @@ function Ichimokuvue_type_script_lang_js_arrayLikeToArray(arr, len) { if (len ==
         } finally {
           _iterator6.f();
         }
-
         this.ctxChinkou.stroke();
       }
     },
@@ -1816,9 +1712,6 @@ var Ichimoku_component = normalizeComponent(
   
 )
 
-/* hot reload */
-if (false) { var Ichimoku_api; }
-Ichimoku_component.options.__file = "src/overlays/Ichimoku/Ichimoku.vue"
 /* harmony default export */ const Ichimoku = (Ichimoku_component.exports);
 ;// CONCATENATED MODULE: ./node_modules/babel-loader/lib/index.js!./node_modules/vue-loader/lib/index.js??vue-loader-options!./src/overlays/KC/KC.vue?vue&type=script&lang=js&
 
@@ -1891,9 +1784,6 @@ var KC_component = normalizeComponent(
   
 )
 
-/* hot reload */
-if (false) { var KC_api; }
-KC_component.options.__file = "src/overlays/KC/KC.vue"
 /* harmony default export */ const KC = (KC_component.exports);
 ;// CONCATENATED MODULE: ./node_modules/babel-loader/lib/index.js!./node_modules/vue-loader/lib/index.js??vue-loader-options!./src/overlays/KCW/KCW.vue?vue&type=script&lang=js&
 
@@ -1964,17 +1854,11 @@ var KCW_component = normalizeComponent(
   
 )
 
-/* hot reload */
-if (false) { var KCW_api; }
-KCW_component.options.__file = "src/overlays/KCW/KCW.vue"
 /* harmony default export */ const KCW = (KCW_component.exports);
 ;// CONCATENATED MODULE: ./node_modules/babel-loader/lib/index.js!./node_modules/vue-loader/lib/index.js??vue-loader-options!./src/overlays/LongShortTrades/LongShortTrades.vue?vue&type=script&lang=js&
 function LongShortTradesvue_type_script_lang_js_createForOfIteratorHelper(o, allowArrayLike) { var it = typeof Symbol !== "undefined" && o[Symbol.iterator] || o["@@iterator"]; if (!it) { if (Array.isArray(o) || (it = LongShortTradesvue_type_script_lang_js_unsupportedIterableToArray(o)) || allowArrayLike && o && typeof o.length === "number") { if (it) o = it; var i = 0; var F = function F() {}; return { s: F, n: function n() { if (i >= o.length) return { done: true }; return { done: false, value: o[i++] }; }, e: function e(_e) { throw _e; }, f: F }; } throw new TypeError("Invalid attempt to iterate non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); } var normalCompletion = true, didErr = false, err; return { s: function s() { it = it.call(o); }, n: function n() { var step = it.next(); normalCompletion = step.done; return step; }, e: function e(_e2) { didErr = true; err = _e2; }, f: function f() { try { if (!normalCompletion && it["return"] != null) it["return"](); } finally { if (didErr) throw err; } } }; }
-
 function LongShortTradesvue_type_script_lang_js_unsupportedIterableToArray(o, minLen) { if (!o) return; if (typeof o === "string") return LongShortTradesvue_type_script_lang_js_arrayLikeToArray(o, minLen); var n = Object.prototype.toString.call(o).slice(8, -1); if (n === "Object" && o.constructor) n = o.constructor.name; if (n === "Map" || n === "Set") return Array.from(o); if (n === "Arguments" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return LongShortTradesvue_type_script_lang_js_arrayLikeToArray(o, minLen); }
-
 function LongShortTradesvue_type_script_lang_js_arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len = arr.length; for (var i = 0, arr2 = new Array(len); i < len; i++) { arr2[i] = arr[i]; } return arr2; }
-
 //Long Short Overlay. Expected Format: [ <timestamp>, <Short:0 Long:1 ShortCover: 2 LongCover:3>, <Price Change>, <Percent Price Change>, <Open Price>, <High Price>, <Low Price>, <Close Price> ]
 
 /* harmony default export */ const LongShortTradesvue_type_script_lang_js_ = ({
@@ -2026,10 +1910,8 @@ function LongShortTradesvue_type_script_lang_js_arrayLikeToArray(arr, len) { if 
       var layout = this.$props.layout;
       ctx.lineWidth = 1.5;
       ctx.strokeStyle = 'black';
-
       var _iterator = LongShortTradesvue_type_script_lang_js_createForOfIteratorHelper(this.$props.data),
-          _step;
-
+        _step;
       try {
         for (_iterator.s(); !(_step = _iterator.n()).done;) {
           var p = _step.value;
@@ -2044,39 +1926,32 @@ function LongShortTradesvue_type_script_lang_js_arrayLikeToArray(arr, len) { if 
           var x = layout.t2screen(tradeTime);
           var lowPriceY = layout.$2screen(lowPrice);
           var highPriceY = layout.$2screen(highPrice);
-
           switch (longShortEntryExit) {
             case 0:
               this.filledArrowDownFilledBottom(ctx, x, highPriceY - 25, 5, 5, 3, 20, this.short_color);
               this.draw_label(ctx, x + 30, highPriceY - 35, this.currency_symbol + closePrice);
               break;
-
             case 1:
               this.filledArrowUpFilledBottom(ctx, x, lowPriceY + 20, 5, 5, 3, 20, this.long_color);
               this.draw_label(ctx, x + 30, lowPriceY + 40, this.currency_symbol + closePrice);
               break;
-
             case 2:
               this.upTriangle(ctx, x, lowPriceY + 25, 5, 7, this.short_cover_color);
-
               if (this.show_label && priceChange) {
                 this.draw_label(ctx, x, lowPriceY + 50, priceChange + " (" + percentPriceChange + ")");
               }
-
               break;
-
             case 3:
               this.downTriangle(ctx, x, highPriceY - 25, 5, 7, this.long_cover_color);
-
               if (this.show_label && priceChange) {
                 this.draw_label(ctx, x, highPriceY - 45, priceChange + " (" + percentPriceChange + ")");
               }
-
               break;
-
             default:
               ctx.fillStyle = 'black';
-          } // this.simpleArrowUp(ctx, x, z - 25, '#84e5b1')
+          }
+
+          // this.simpleArrowUp(ctx, x, z - 25, '#84e5b1')
           // this.simpleArrowDown(ctx, x, z - 25, '#84e5b1')
           // this.filledArrowUp(ctx, x, z - 25, 5, 5, 20, '#84e5b1')
           // this.filledDownArrow(ctx, x, z - 25, 5, 5, 20, '#84e5b1')
@@ -2084,7 +1959,6 @@ function LongShortTradesvue_type_script_lang_js_arrayLikeToArray(arr, len) { if 
           // this.filledArrowDownFilledBottom(ctx, x, z - 25, 5, 5, 3, 20, '#84e5b1')
           // this.upTriangle(ctx, x, z-60, 5, 7, '#84e5b1')
           // this.downTriangle(ctx, x, z - 25, 5, 7, '#84e5b1')
-
         }
       } catch (err) {
         _iterator.e(err);
@@ -2106,23 +1980,18 @@ function LongShortTradesvue_type_script_lang_js_arrayLikeToArray(arr, len) { if 
         case 0:
           var pos = 'Short';
           break;
-
         case 1:
           pos = 'Long';
           break;
-
         case 2:
           pos = 'Short Cover';
           break;
-
         case 3:
           pos = 'Long Cover';
           break;
-
         default:
           pos = 'Unknown';
       }
-
       return [{
         value: pos
       }, {
@@ -2253,19 +2122,14 @@ var LongShortTrades_component = normalizeComponent(
   
 )
 
-/* hot reload */
-if (false) { var LongShortTrades_api; }
-LongShortTrades_component.options.__file = "src/overlays/LongShortTrades/LongShortTrades.vue"
 /* harmony default export */ const LongShortTrades = (LongShortTrades_component.exports);
 ;// CONCATENATED MODULE: ./node_modules/babel-loader/lib/index.js!./node_modules/vue-loader/lib/index.js??vue-loader-options!./src/overlays/MACD/MACD.vue?vue&type=script&lang=js&
 function MACDvue_type_script_lang_js_createForOfIteratorHelper(o, allowArrayLike) { var it = typeof Symbol !== "undefined" && o[Symbol.iterator] || o["@@iterator"]; if (!it) { if (Array.isArray(o) || (it = MACDvue_type_script_lang_js_unsupportedIterableToArray(o)) || allowArrayLike && o && typeof o.length === "number") { if (it) o = it; var i = 0; var F = function F() {}; return { s: F, n: function n() { if (i >= o.length) return { done: true }; return { done: false, value: o[i++] }; }, e: function e(_e) { throw _e; }, f: F }; } throw new TypeError("Invalid attempt to iterate non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); } var normalCompletion = true, didErr = false, err; return { s: function s() { it = it.call(o); }, n: function n() { var step = it.next(); normalCompletion = step.done; return step; }, e: function e(_e2) { didErr = true; err = _e2; }, f: function f() { try { if (!normalCompletion && it["return"] != null) it["return"](); } finally { if (didErr) throw err; } } }; }
-
 function MACDvue_type_script_lang_js_unsupportedIterableToArray(o, minLen) { if (!o) return; if (typeof o === "string") return MACDvue_type_script_lang_js_arrayLikeToArray(o, minLen); var n = Object.prototype.toString.call(o).slice(8, -1); if (n === "Object" && o.constructor) n = o.constructor.name; if (n === "Map" || n === "Set") return Array.from(o); if (n === "Arguments" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return MACDvue_type_script_lang_js_arrayLikeToArray(o, minLen); }
-
 function MACDvue_type_script_lang_js_arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len = arr.length; for (var i = 0, arr2 = new Array(len); i < len; i++) { arr2[i] = arr[i]; } return arr2; }
-
 // TODO: pass colors from settings to the script
 // TODO: hist lines => recangles (like in volbar.js)
+
 
 /* harmony default export */ const MACDvue_type_script_lang_js_ = ({
   name: 'MACD',
@@ -2292,17 +2156,17 @@ function MACDvue_type_script_lang_js_arrayLikeToArray(arr, len) { if (len == nul
       };
     },
     draw: function draw(ctx) {
-      var layout = this.$props.layout; // HISTOGRAM
+      var layout = this.$props.layout;
+
+      // HISTOGRAM
 
       var base = layout.$2screen(0) + 0.5;
       var off = this.hist_width % 2 ? 0 : 0.5;
       ctx.lineWidth = this.hist_width;
       ctx.strokeStyle = this.color;
       ctx.beginPath();
-
       var _iterator = MACDvue_type_script_lang_js_createForOfIteratorHelper(this.$props.data),
-          _step;
-
+        _step;
       try {
         for (_iterator.s(); !(_step = _iterator.n()).done;) {
           var p = _step.value;
@@ -2313,29 +2177,24 @@ function MACDvue_type_script_lang_js_arrayLikeToArray(arr, len) { if (len == nul
           ctx.moveTo(x, base);
           ctx.lineTo(x, y);
           ctx.stroke();
-        } // MACD LINE
+        }
 
+        // MACD LINE
       } catch (err) {
         _iterator.e(err);
       } finally {
         _iterator.f();
       }
-
       ctx.beginPath();
       ctx.lineWidth = this.macd_width;
       ctx.strokeStyle = this.macd_color;
-
       var _iterator2 = MACDvue_type_script_lang_js_createForOfIteratorHelper(this.$props.data),
-          _step2;
-
+        _step2;
       try {
         for (_iterator2.s(); !(_step2 = _iterator2.n()).done;) {
           var p = _step2.value;
-
           var _x = layout.t2screen(p[0]);
-
           var _y = layout.$2screen(p[2]);
-
           ctx.lineTo(_x, _y);
         }
       } catch (err) {
@@ -2343,24 +2202,20 @@ function MACDvue_type_script_lang_js_arrayLikeToArray(arr, len) { if (len == nul
       } finally {
         _iterator2.f();
       }
+      ctx.stroke();
 
-      ctx.stroke(); // SIGNAL LINE
+      // SIGNAL LINE
 
       ctx.beginPath();
       ctx.lineWidth = this.signal_width;
       ctx.strokeStyle = this.signal_color;
-
       var _iterator3 = MACDvue_type_script_lang_js_createForOfIteratorHelper(this.$props.data),
-          _step3;
-
+        _step3;
       try {
         for (_iterator3.s(); !(_step3 = _iterator3.n()).done;) {
           var p = _step3.value;
-
           var _x2 = layout.t2screen(p[0]);
-
           var _y2 = layout.$2screen(p[3]);
-
           ctx.lineTo(_x2, _y2);
         }
       } catch (err) {
@@ -2368,7 +2223,6 @@ function MACDvue_type_script_lang_js_arrayLikeToArray(arr, len) { if (len == nul
       } finally {
         _iterator3.f();
       }
-
       ctx.stroke();
     },
     use_for: function use_for() {
@@ -2458,9 +2312,6 @@ var MACD_component = normalizeComponent(
   
 )
 
-/* hot reload */
-if (false) { var MACD_api; }
-MACD_component.options.__file = "src/overlays/MACD/MACD.vue"
 /* harmony default export */ const MACD = (MACD_component.exports);
 ;// CONCATENATED MODULE: ./node_modules/babel-loader/lib/index.js!./node_modules/vue-loader/lib/index.js??vue-loader-options!./src/overlays/MFI/MFI.vue?vue&type=script&lang=js&
 
@@ -2527,9 +2378,6 @@ var MFI_component = normalizeComponent(
   
 )
 
-/* hot reload */
-if (false) { var MFI_api; }
-MFI_component.options.__file = "src/overlays/MFI/MFI.vue"
 /* harmony default export */ const MFI = (MFI_component.exports);
 ;// CONCATENATED MODULE: ./node_modules/babel-loader/lib/index.js!./node_modules/vue-loader/lib/index.js??vue-loader-options!./src/overlays/MOM/MOM.vue?vue&type=script&lang=js&
 
@@ -2592,17 +2440,11 @@ var MOM_component = normalizeComponent(
   
 )
 
-/* hot reload */
-if (false) { var MOM_api; }
-MOM_component.options.__file = "src/overlays/MOM/MOM.vue"
 /* harmony default export */ const MOM = (MOM_component.exports);
 ;// CONCATENATED MODULE: ./node_modules/babel-loader/lib/index.js!./node_modules/vue-loader/lib/index.js??vue-loader-options!./src/overlays/Markers/Markers.vue?vue&type=script&lang=js&
 function Markersvue_type_script_lang_js_createForOfIteratorHelper(o, allowArrayLike) { var it = typeof Symbol !== "undefined" && o[Symbol.iterator] || o["@@iterator"]; if (!it) { if (Array.isArray(o) || (it = Markersvue_type_script_lang_js_unsupportedIterableToArray(o)) || allowArrayLike && o && typeof o.length === "number") { if (it) o = it; var i = 0; var F = function F() {}; return { s: F, n: function n() { if (i >= o.length) return { done: true }; return { done: false, value: o[i++] }; }, e: function e(_e) { throw _e; }, f: F }; } throw new TypeError("Invalid attempt to iterate non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); } var normalCompletion = true, didErr = false, err; return { s: function s() { it = it.call(o); }, n: function n() { var step = it.next(); normalCompletion = step.done; return step; }, e: function e(_e2) { didErr = true; err = _e2; }, f: function f() { try { if (!normalCompletion && it["return"] != null) it["return"](); } finally { if (didErr) throw err; } } }; }
-
 function Markersvue_type_script_lang_js_unsupportedIterableToArray(o, minLen) { if (!o) return; if (typeof o === "string") return Markersvue_type_script_lang_js_arrayLikeToArray(o, minLen); var n = Object.prototype.toString.call(o).slice(8, -1); if (n === "Object" && o.constructor) n = o.constructor.name; if (n === "Map" || n === "Set") return Array.from(o); if (n === "Arguments" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return Markersvue_type_script_lang_js_arrayLikeToArray(o, minLen); }
-
 function Markersvue_type_script_lang_js_arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len = arr.length; for (var i = 0, arr2 = new Array(len); i < len; i++) { arr2[i] = arr[i]; } return arr2; }
-
 
 /* harmony default export */ const Markersvue_type_script_lang_js_ = ({
   name: 'Markers',
@@ -2623,10 +2465,8 @@ function Markersvue_type_script_lang_js_arrayLikeToArray(arr, len) { if (len == 
       ctx.strokeStyle = 'black';
       document.body.style.cursor = 'auto';
       this.selected = null;
-
       var _iterator = Markersvue_type_script_lang_js_createForOfIteratorHelper(this.$props.data),
-          _step;
-
+        _step;
       try {
         for (_iterator.s(); !(_step = _iterator.n()).done;) {
           var p = _step.value;
@@ -2637,11 +2477,9 @@ function Markersvue_type_script_lang_js_arrayLikeToArray(arr, len) { if (len == 
       } finally {
         _iterator.f();
       }
-
       var f = this.data.find(function (x) {
         return x[1].sel;
       });
-
       if (f) {
         this.draw_point(ctx, f);
       }
@@ -2654,14 +2492,14 @@ function Markersvue_type_script_lang_js_arrayLikeToArray(arr, len) { if (len == 
       var height = p[1].sel ? 20 : 14;
       var width = p[1].sel ? 17 : 13;
       var x = layout.t2screen(p[0]) - width * 0.5;
-      var y = layout.$2screen(p[1].$) - (p[1].sel ? 27 : 20); // Collisions
+      var y = layout.$2screen(p[1].$) - (p[1].sel ? 27 : 20);
 
+      // Collisions
       if (this.mouse.x > x && this.mouse.x < x + width && this.mouse.y > y && this.mouse.y < y + height) {
         document.body.style.cursor = 'pointer';
         this.selected = p;
         stroke = this.colors.text;
       }
-
       ctx.beginPath();
       ctx.moveTo(x + radius, y);
       ctx.lineTo(x + width - radius, y);
@@ -2733,17 +2571,11 @@ var Markers_component = normalizeComponent(
   
 )
 
-/* hot reload */
-if (false) { var Markers_api; }
-Markers_component.options.__file = "src/overlays/Markers/Markers.vue"
 /* harmony default export */ const Markers = (Markers_component.exports);
 ;// CONCATENATED MODULE: ./node_modules/babel-loader/lib/index.js!./node_modules/vue-loader/lib/index.js??vue-loader-options!./src/overlays/PlotCross/PlotCross.vue?vue&type=script&lang=js&
 function PlotCrossvue_type_script_lang_js_createForOfIteratorHelper(o, allowArrayLike) { var it = typeof Symbol !== "undefined" && o[Symbol.iterator] || o["@@iterator"]; if (!it) { if (Array.isArray(o) || (it = PlotCrossvue_type_script_lang_js_unsupportedIterableToArray(o)) || allowArrayLike && o && typeof o.length === "number") { if (it) o = it; var i = 0; var F = function F() {}; return { s: F, n: function n() { if (i >= o.length) return { done: true }; return { done: false, value: o[i++] }; }, e: function e(_e) { throw _e; }, f: F }; } throw new TypeError("Invalid attempt to iterate non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); } var normalCompletion = true, didErr = false, err; return { s: function s() { it = it.call(o); }, n: function n() { var step = it.next(); normalCompletion = step.done; return step; }, e: function e(_e2) { didErr = true; err = _e2; }, f: function f() { try { if (!normalCompletion && it["return"] != null) it["return"](); } finally { if (didErr) throw err; } } }; }
-
 function PlotCrossvue_type_script_lang_js_unsupportedIterableToArray(o, minLen) { if (!o) return; if (typeof o === "string") return PlotCrossvue_type_script_lang_js_arrayLikeToArray(o, minLen); var n = Object.prototype.toString.call(o).slice(8, -1); if (n === "Object" && o.constructor) n = o.constructor.name; if (n === "Map" || n === "Set") return Array.from(o); if (n === "Arguments" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return PlotCrossvue_type_script_lang_js_arrayLikeToArray(o, minLen); }
-
 function PlotCrossvue_type_script_lang_js_arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len = arr.length; for (var i = 0, arr2 = new Array(len); i < len; i++) { arr2[i] = arr[i]; } return arr2; }
-
 
 /* harmony default export */ const PlotCrossvue_type_script_lang_js_ = ({
   name: 'PlotCross',
@@ -2763,36 +2595,31 @@ function PlotCrossvue_type_script_lang_js_arrayLikeToArray(arr, len) { if (len =
       var layout = this.$props.layout;
       var base = layout.$2screen(0) + 0.5;
       var off = this.line_width % 2 ? 0 : 0.5;
-      var off2 = this.line_width % 2 ? 0.5 : 1; // Color changed
+      var off2 = this.line_width % 2 ? 0.5 : 1;
 
+      // Color changed
       var changed = false;
-
       var _iterator = PlotCrossvue_type_script_lang_js_createForOfIteratorHelper(this.$props.data),
-          _step;
-
+        _step;
       try {
         for (_iterator.s(); !(_step = _iterator.n()).done;) {
           var p = _step.value;
           var x = layout.t2screen(p[0]) - off;
           var y = layout.$2screen(p[1]) - off;
           var _changed = false;
-
           if (p[2]) {
             if (ctx.strokeStyle !== p[2]) {
               ctx.stroke();
               _changed = true;
             }
-
             ctx.strokeStyle = p[2];
           } else {
             if (ctx.strokeStyle !== this.color) {
               ctx.stroke();
               _changed = true;
             }
-
             ctx.strokeStyle = this.color;
           }
-
           if (_changed) ctx.beginPath();
           ctx.moveTo(x, y - w * 2 + off2);
           ctx.lineTo(x, y + w * 2 - off2);
@@ -2804,7 +2631,6 @@ function PlotCrossvue_type_script_lang_js_arrayLikeToArray(arr, len) { if (len =
       } finally {
         _iterator.f();
       }
-
       ctx.stroke();
     },
     use_for: function use_for() {
@@ -2812,11 +2638,9 @@ function PlotCrossvue_type_script_lang_js_arrayLikeToArray(arr, len) { if (len =
     },
     legend: function legend(values) {
       var x = values[1];
-
       if (typeof x === "number") {
         x = x.toFixed(Math.abs(x) > 0.001 ? 4 : 8);
       }
-
       return [{
         value: x,
         color: values[2] || this.color
@@ -2863,9 +2687,6 @@ var PlotCross_component = normalizeComponent(
   
 )
 
-/* hot reload */
-if (false) { var PlotCross_api; }
-PlotCross_component.options.__file = "src/overlays/PlotCross/PlotCross.vue"
 /* harmony default export */ const PlotCross = (PlotCross_component.exports);
 ;// CONCATENATED MODULE: ./node_modules/babel-loader/lib/index.js!./node_modules/vue-loader/lib/index.js??vue-loader-options!./src/overlays/ROC/ROC.vue?vue&type=script&lang=js&
 
@@ -2928,9 +2749,6 @@ var ROC_component = normalizeComponent(
   
 )
 
-/* hot reload */
-if (false) { var ROC_api; }
-ROC_component.options.__file = "src/overlays/ROC/ROC.vue"
 /* harmony default export */ const ROC = (ROC_component.exports);
 ;// CONCATENATED MODULE: ./node_modules/babel-loader/lib/index.js!./node_modules/vue-loader/lib/index.js??vue-loader-options!./src/overlays/RSI/RSI.vue?vue&type=script&lang=js&
 
@@ -2995,9 +2813,6 @@ var RSI_component = normalizeComponent(
   
 )
 
-/* hot reload */
-if (false) { var RSI_api; }
-RSI_component.options.__file = "src/overlays/RSI/RSI.vue"
 /* harmony default export */ const RSI = (RSI_component.exports);
 ;// CONCATENATED MODULE: ./node_modules/babel-loader/lib/index.js!./node_modules/vue-loader/lib/index.js??vue-loader-options!./src/overlays/Ribbon/Ribbon.vue?vue&type=script&lang=js&
 
@@ -3068,9 +2883,6 @@ var Ribbon_component = normalizeComponent(
   
 )
 
-/* hot reload */
-if (false) { var Ribbon_api; }
-Ribbon_component.options.__file = "src/overlays/Ribbon/Ribbon.vue"
 /* harmony default export */ const Ribbon = (Ribbon_component.exports);
 ;// CONCATENATED MODULE: ./node_modules/babel-loader/lib/index.js!./node_modules/vue-loader/lib/index.js??vue-loader-options!./src/overlays/SAR/SAR.vue?vue&type=script&lang=js&
 
@@ -3141,9 +2953,6 @@ var SAR_component = normalizeComponent(
   
 )
 
-/* hot reload */
-if (false) { var SAR_api; }
-SAR_component.options.__file = "src/overlays/SAR/SAR.vue"
 /* harmony default export */ const SAR = (SAR_component.exports);
 ;// CONCATENATED MODULE: ./node_modules/babel-loader/lib/index.js!./node_modules/vue-loader/lib/index.js??vue-loader-options!./src/overlays/SMA/SMA.vue?vue&type=script&lang=js&
 
@@ -3206,9 +3015,6 @@ var SMA_component = normalizeComponent(
   
 )
 
-/* hot reload */
-if (false) { var SMA_api; }
-SMA_component.options.__file = "src/overlays/SMA/SMA.vue"
 /* harmony default export */ const SMA = (SMA_component.exports);
 ;// CONCATENATED MODULE: ./node_modules/babel-loader/lib/index.js!./node_modules/vue-loader/lib/index.js??vue-loader-options!./src/overlays/SWMA/SWMA.vue?vue&type=script&lang=js&
 
@@ -3266,17 +3072,11 @@ var SWMA_component = normalizeComponent(
   
 )
 
-/* hot reload */
-if (false) { var SWMA_api; }
-SWMA_component.options.__file = "src/overlays/SWMA/SWMA.vue"
 /* harmony default export */ const SWMA = (SWMA_component.exports);
 ;// CONCATENATED MODULE: ./node_modules/babel-loader/lib/index.js!./node_modules/vue-loader/lib/index.js??vue-loader-options!./src/overlays/Stoch/Stoch.vue?vue&type=script&lang=js&
 function Stochvue_type_script_lang_js_createForOfIteratorHelper(o, allowArrayLike) { var it = typeof Symbol !== "undefined" && o[Symbol.iterator] || o["@@iterator"]; if (!it) { if (Array.isArray(o) || (it = Stochvue_type_script_lang_js_unsupportedIterableToArray(o)) || allowArrayLike && o && typeof o.length === "number") { if (it) o = it; var i = 0; var F = function F() {}; return { s: F, n: function n() { if (i >= o.length) return { done: true }; return { done: false, value: o[i++] }; }, e: function e(_e) { throw _e; }, f: F }; } throw new TypeError("Invalid attempt to iterate non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); } var normalCompletion = true, didErr = false, err; return { s: function s() { it = it.call(o); }, n: function n() { var step = it.next(); normalCompletion = step.done; return step; }, e: function e(_e2) { didErr = true; err = _e2; }, f: function f() { try { if (!normalCompletion && it["return"] != null) it["return"](); } finally { if (didErr) throw err; } } }; }
-
 function Stochvue_type_script_lang_js_unsupportedIterableToArray(o, minLen) { if (!o) return; if (typeof o === "string") return Stochvue_type_script_lang_js_arrayLikeToArray(o, minLen); var n = Object.prototype.toString.call(o).slice(8, -1); if (n === "Object" && o.constructor) n = o.constructor.name; if (n === "Map" || n === "Set") return Array.from(o); if (n === "Arguments" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return Stochvue_type_script_lang_js_arrayLikeToArray(o, minLen); }
-
 function Stochvue_type_script_lang_js_arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len = arr.length; for (var i = 0, arr2 = new Array(len); i < len; i++) { arr2[i] = arr[i]; } return arr2; }
-
 
 /* harmony default export */ const Stochvue_type_script_lang_js_ = ({
   name: 'Stoch',
@@ -3303,15 +3103,14 @@ function Stochvue_type_script_lang_js_arrayLikeToArray(arr, len) { if (len == nu
     draw: function draw(ctx) {
       var layout = this.$props.layout;
       var upper = layout.$2screen(this.sett.upper || 80);
-      var lower = layout.$2screen(this.sett.lower || 20); // K
+      var lower = layout.$2screen(this.sett.lower || 20);
 
+      // K
       ctx.lineWidth = this.line_width;
       ctx.strokeStyle = this.k_color;
       ctx.beginPath();
-
       var _iterator = Stochvue_type_script_lang_js_createForOfIteratorHelper(this.$props.data),
-          _step;
-
+        _step;
       try {
         for (_iterator.s(); !(_step = _iterator.n()).done;) {
           var p = _step.value;
@@ -3324,24 +3123,19 @@ function Stochvue_type_script_lang_js_arrayLikeToArray(arr, len) { if (len == nu
       } finally {
         _iterator.f();
       }
+      ctx.stroke();
 
-      ctx.stroke(); // D
-
+      // D
       ctx.lineWidth = this.line_width;
       ctx.strokeStyle = this.d_color;
       ctx.beginPath();
-
       var _iterator2 = Stochvue_type_script_lang_js_createForOfIteratorHelper(this.$props.data),
-          _step2;
-
+        _step2;
       try {
         for (_iterator2.s(); !(_step2 = _iterator2.n()).done;) {
           var p = _step2.value;
-
           var _x = layout.t2screen(p[0]);
-
           var _y = layout.$2screen(p[2]);
-
           ctx.lineTo(_x, _y);
         }
       } catch (err) {
@@ -3349,19 +3143,20 @@ function Stochvue_type_script_lang_js_arrayLikeToArray(arr, len) { if (len == nu
       } finally {
         _iterator2.f();
       }
-
       ctx.stroke();
       ctx.strokeStyle = this.band_color;
       ctx.setLineDash([5]); // Will be removed after draw()
+      ctx.beginPath();
 
-      ctx.beginPath(); // Fill the area between the bands
-
+      // Fill the area between the bands
       ctx.fillStyle = this.back_color;
-      ctx.fillRect(0, upper, layout.width, lower - upper); // Upper band
+      ctx.fillRect(0, upper, layout.width, lower - upper);
 
+      // Upper band
       ctx.moveTo(0, upper);
-      ctx.lineTo(layout.width, upper); // Lower band
+      ctx.lineTo(layout.width, upper);
 
+      // Lower band
       ctx.moveTo(0, lower);
       ctx.lineTo(layout.width, lower);
       ctx.stroke();
@@ -3437,9 +3232,6 @@ var Stoch_component = normalizeComponent(
   
 )
 
-/* hot reload */
-if (false) { var Stoch_api; }
-Stoch_component.options.__file = "src/overlays/Stoch/Stoch.vue"
 /* harmony default export */ const Stoch = (Stoch_component.exports);
 ;// CONCATENATED MODULE: ./node_modules/babel-loader/lib/index.js!./node_modules/vue-loader/lib/index.js??vue-loader-options!./src/overlays/TSI/TSI.vue?vue&type=script&lang=js&
 
@@ -3510,17 +3302,11 @@ var TSI_component = normalizeComponent(
   
 )
 
-/* hot reload */
-if (false) { var TSI_api; }
-TSI_component.options.__file = "src/overlays/TSI/TSI.vue"
 /* harmony default export */ const TSI = (TSI_component.exports);
 ;// CONCATENATED MODULE: ./node_modules/babel-loader/lib/index.js!./node_modules/vue-loader/lib/index.js??vue-loader-options!./src/overlays/TradesPlus/TradesPlus.vue?vue&type=script&lang=js&
 function TradesPlusvue_type_script_lang_js_createForOfIteratorHelper(o, allowArrayLike) { var it = typeof Symbol !== "undefined" && o[Symbol.iterator] || o["@@iterator"]; if (!it) { if (Array.isArray(o) || (it = TradesPlusvue_type_script_lang_js_unsupportedIterableToArray(o)) || allowArrayLike && o && typeof o.length === "number") { if (it) o = it; var i = 0; var F = function F() {}; return { s: F, n: function n() { if (i >= o.length) return { done: true }; return { done: false, value: o[i++] }; }, e: function e(_e) { throw _e; }, f: F }; } throw new TypeError("Invalid attempt to iterate non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); } var normalCompletion = true, didErr = false, err; return { s: function s() { it = it.call(o); }, n: function n() { var step = it.next(); normalCompletion = step.done; return step; }, e: function e(_e2) { didErr = true; err = _e2; }, f: function f() { try { if (!normalCompletion && it["return"] != null) it["return"](); } finally { if (didErr) throw err; } } }; }
-
 function TradesPlusvue_type_script_lang_js_unsupportedIterableToArray(o, minLen) { if (!o) return; if (typeof o === "string") return TradesPlusvue_type_script_lang_js_arrayLikeToArray(o, minLen); var n = Object.prototype.toString.call(o).slice(8, -1); if (n === "Object" && o.constructor) n = o.constructor.name; if (n === "Map" || n === "Set") return Array.from(o); if (n === "Arguments" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return TradesPlusvue_type_script_lang_js_arrayLikeToArray(o, minLen); }
-
 function TradesPlusvue_type_script_lang_js_arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len = arr.length; for (var i = 0, arr2 = new Array(len); i < len; i++) { arr2[i] = arr[i]; } return arr2; }
-
 
 var CROSS = "m512.001 84.853-84.853-84.853-171.147 171.147-171.148-171.147-84.853\n84.853 171.148 171.147-171.148 171.148 84.853 84.853 171.148-171.147\n171.147 171.147 84.853-84.853-171.148-171.148z";
 /* harmony default export */ const TradesPlusvue_type_script_lang_js_ = ({
@@ -3537,16 +3323,13 @@ var CROSS = "m512.001 84.853-84.853-84.853-171.147 171.147-171.148-171.147-84.85
     draw: function draw(ctx) {
       var layout = this.$props.layout;
       ctx.strokeStyle = 'black';
-
       var _iterator = TradesPlusvue_type_script_lang_js_createForOfIteratorHelper(this.$props.data),
-          _step;
-
+        _step;
       try {
         for (_iterator.s(); !(_step = _iterator.n()).done;) {
           var p = _step.value;
           ctx.fillStyle = p[1] ? this.buy_color : this.sell_color;
           var x = layout.t2screen(p[0]); // x - Mapping
-
           var y = layout.$2screen(p[2]); // y - Mapping
 
           if (p[3] === 'Stop') {
@@ -3554,7 +3337,6 @@ var CROSS = "m512.001 84.853-84.853-84.853-171.147 171.147-171.148-171.147-84.85
           } else {
             this.draw_circle(ctx, x, y);
           }
-
           if (this.show_label && p[3] && p[3] !== 'Stop') {
             this.draw_label(ctx, x, y, p);
           }
@@ -3598,15 +3380,12 @@ var CROSS = "m512.001 84.853-84.853-84.853-171.147 171.147-171.148-171.147-84.85
         case 0:
           var pos = 'Sell';
           break;
-
         case 1:
           pos = 'Buy';
           break;
-
         default:
           pos = 'Unknown';
       }
-
       return [{
         value: pos
       }, {
@@ -3666,9 +3445,6 @@ var TradesPlus_component = normalizeComponent(
   
 )
 
-/* hot reload */
-if (false) { var TradesPlus_api; }
-TradesPlus_component.options.__file = "src/overlays/TradesPlus/TradesPlus.vue"
 /* harmony default export */ const TradesPlus = (TradesPlus_component.exports);
 ;// CONCATENATED MODULE: ./node_modules/babel-loader/lib/index.js!./node_modules/vue-loader/lib/index.js??vue-loader-options!./src/overlays/VWMA/VWMA.vue?vue&type=script&lang=js&
 
@@ -3731,9 +3507,6 @@ var VWMA_component = normalizeComponent(
   
 )
 
-/* hot reload */
-if (false) { var VWMA_api; }
-VWMA_component.options.__file = "src/overlays/VWMA/VWMA.vue"
 /* harmony default export */ const VWMA = (VWMA_component.exports);
 ;// CONCATENATED MODULE: ./node_modules/babel-loader/lib/index.js!./node_modules/vue-loader/lib/index.js??vue-loader-options!./src/overlays/WilliamsR/WilliamsR.vue?vue&type=script&lang=js&
 
@@ -3800,18 +3573,13 @@ var WilliamsR_component = normalizeComponent(
   
 )
 
-/* hot reload */
-if (false) { var WilliamsR_api; }
-WilliamsR_component.options.__file = "src/overlays/WilliamsR/WilliamsR.vue"
 /* harmony default export */ const WilliamsR = (WilliamsR_component.exports);
 ;// CONCATENATED MODULE: ./node_modules/@babel/runtime/helpers/esm/arrayLikeToArray.js
 function arrayLikeToArray_arrayLikeToArray(arr, len) {
   if (len == null || len > arr.length) len = arr.length;
-
   for (var i = 0, arr2 = new Array(len); i < len; i++) {
     arr2[i] = arr[i];
   }
-
   return arr2;
 }
 ;// CONCATENATED MODULE: ./node_modules/@babel/runtime/helpers/esm/arrayWithoutHoles.js
@@ -3861,49 +3629,48 @@ function _defineProperties(target, props) {
     Object.defineProperty(target, descriptor.key, descriptor);
   }
 }
-
 function _createClass(Constructor, protoProps, staticProps) {
   if (protoProps) _defineProperties(Constructor.prototype, protoProps);
   if (staticProps) _defineProperties(Constructor, staticProps);
+  Object.defineProperty(Constructor, "prototype", {
+    writable: false
+  });
   return Constructor;
 }
 ;// CONCATENATED MODULE: ./src/overlays/XOhlcBars/primitives/xohlcbar.js
-
 
 
 // Ohlc object for Ohlcs overlay
 var XOhlcBar = /*#__PURE__*/function () {
   function XOhlcBar(overlay, ctx, data) {
     _classCallCheck(this, XOhlcBar);
-
     this.ctx = ctx;
     this.self = overlay;
     this.style = data.raw[6] || this.self;
-
     this._draw(data);
   }
-
   _createClass(XOhlcBar, [{
     key: "_draw",
     value: function _draw(data) {
       var line_width = this.style.lineWidth;
       var hlc_only = this.style.chartType == "HLC";
-      var line_width_half = line_width / 2; // Bar color
+      var line_width_half = line_width / 2;
 
+      // Bar color
       var bar_color = data.c <= data.o ? this.style.upBarColor : this.style.downBarColor;
       var width = Math.max(data.w, 1);
       var halfwidth = Math.max(Math.floor(width * 0.5), 1);
       var height = Math.abs(data.o - data.c);
       var max_h = data.c === data.o ? 1 : 2;
-      var s = line_width % 2 === 0 ? 0 : 0.5; // Draw the line from low to high and open and close also
+      var s = line_width % 2 === 0 ? 0 : 0.5;
 
+      // Draw the line from low to high and open and close also
       this.ctx.strokeStyle = bar_color;
       this.ctx.lineWidth = line_width;
-      this.ctx.beginPath(); // Draw high to low
-
+      this.ctx.beginPath();
+      // Draw high to low
       this.ctx.moveTo(Math.floor(data.x - line_width_half) + s, Math.floor(data.h));
       this.ctx.lineTo(Math.floor(data.x - line_width_half) + s, Math.floor(data.l));
-
       if (width > 1) {
         // Draw open notch
         if (hlc_only) {
@@ -3915,37 +3682,30 @@ var XOhlcBar = /*#__PURE__*/function () {
           // Draw open notch with open price
           this.ctx.moveTo(Math.floor(data.x - halfwidth - line_width_half - 1), Math.floor(data.o) - s);
           this.ctx.lineTo(Math.floor(data.x - line_width_half), Math.floor(data.o) - s);
-        } // Draw close notch
+        }
 
-
+        // Draw close notch
         this.ctx.moveTo(Math.floor(data.x - line_width_half), Math.floor(data.c) - s);
         this.ctx.lineTo(Math.floor(data.x + halfwidth - line_width_half + 1), Math.floor(data.c) - s);
       }
-
       this.ctx.stroke();
     }
   }]);
-
   return XOhlcBar;
 }();
 
-
 ;// CONCATENATED MODULE: ./src/overlays/XOhlcBars/primitives/xvolbar.js
-
 
 
 var XVolbar = /*#__PURE__*/function () {
   function XVolbar(overlay, ctx, data, barData, thinVolumeBar) {
     _classCallCheck(this, XVolbar);
-
     this.ctx = ctx;
     this.$p = overlay.$props;
     this.self = overlay;
     this.style = data.raw[6] || this.self;
-
     this._draw(data, barData, thinVolumeBar);
   }
-
   _createClass(XVolbar, [{
     key: "_draw",
     value: function _draw(data, barData, thinVolumeBar) {
@@ -3959,40 +3719,33 @@ var XVolbar = /*#__PURE__*/function () {
         var h = Math.floor(data.h);
         this.ctx.strokeStyle = bar_color;
         this.ctx.lineWidth = line_width;
-        this.ctx.beginPath(); // Draw high to low
+        this.ctx.beginPath();
 
+        // Draw high to low
         this.ctx.moveTo(Math.floor(barData.x - line_width_half), Math.floor(y0 - h - 0.5));
         this.ctx.lineTo(Math.floor(barData.x - line_width_half), Math.floor(y0 + 0.5));
         this.ctx.stroke();
       } else {
         // Thick Volume Bar
         var _y = this.$p.layout.height;
-
         var _w = data.x2 - data.x1;
-
         var _h = Math.floor(data.h);
-
         this.ctx.fillStyle = data.green ? this.style.upVolBarColor : this.style.downVolBarColor;
         this.ctx.fillRect(Math.floor(data.x1), Math.floor(_y - _h - 0.5), Math.floor(_w), Math.floor(_h + 1));
       }
     }
   }]);
-
   return XVolbar;
 }();
 
-
 ;// CONCATENATED MODULE: ./node_modules/babel-loader/lib/index.js!./node_modules/vue-loader/lib/index.js??vue-loader-options!./src/overlays/XOhlcBars/XOhlcBars.vue?vue&type=script&lang=js&
 
-
 function XOhlcBarsvue_type_script_lang_js_createForOfIteratorHelper(o, allowArrayLike) { var it = typeof Symbol !== "undefined" && o[Symbol.iterator] || o["@@iterator"]; if (!it) { if (Array.isArray(o) || (it = XOhlcBarsvue_type_script_lang_js_unsupportedIterableToArray(o)) || allowArrayLike && o && typeof o.length === "number") { if (it) o = it; var i = 0; var F = function F() {}; return { s: F, n: function n() { if (i >= o.length) return { done: true }; return { done: false, value: o[i++] }; }, e: function e(_e) { throw _e; }, f: F }; } throw new TypeError("Invalid attempt to iterate non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); } var normalCompletion = true, didErr = false, err; return { s: function s() { it = it.call(o); }, n: function n() { var step = it.next(); normalCompletion = step.done; return step; }, e: function e(_e2) { didErr = true; err = _e2; }, f: function f() { try { if (!normalCompletion && it["return"] != null) it["return"](); } finally { if (didErr) throw err; } } }; }
-
 function XOhlcBarsvue_type_script_lang_js_unsupportedIterableToArray(o, minLen) { if (!o) return; if (typeof o === "string") return XOhlcBarsvue_type_script_lang_js_arrayLikeToArray(o, minLen); var n = Object.prototype.toString.call(o).slice(8, -1); if (n === "Object" && o.constructor) n = o.constructor.name; if (n === "Map" || n === "Set") return Array.from(o); if (n === "Arguments" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return XOhlcBarsvue_type_script_lang_js_arrayLikeToArray(o, minLen); }
-
 function XOhlcBarsvue_type_script_lang_js_arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len = arr.length; for (var i = 0, arr2 = new Array(len); i < len; i++) { arr2[i] = arr[i]; } return arr2; }
-
 // Renedrer for ohlcbar + volume (optional)
 // It can be used as the main chart or an indicator
+
 
 
 
@@ -4007,20 +3760,22 @@ function XOhlcBarsvue_type_script_lang_js_arrayLikeToArray(arr, len) { if (len =
         desc: 'Bar Chart'
       };
     },
-    init: function init() {//this.price = new Price(this) // TODO:
+    init: function init() {
+      //this.price = new Price(this) // TODO:
     },
     draw: function draw(ctx) {
       //console.log("XOhlcBar.draw() called. this.$props.data.length = " + this.$props.data.length)
+
       // render as main chart:
       if (this.$props.sub === this.$props.data) {
         var cnv = {
           ohlcbars: this.$props.layout.candles,
           volume: this.$props.layout.volume
-        }; // Else, as offchart / onchart indicator:
+        };
+        // Else, as offchart / onchart indicator:
       } else {
         cnv = (0,external_trading_vue_js_.layout_cnv)(this);
       }
-
       if (this.show_volume) {
         for (var i = 0; i < cnv.volume.length; i++) {
           var volumeData = cnv.volume[i];
@@ -4028,16 +3783,15 @@ function XOhlcBarsvue_type_script_lang_js_arrayLikeToArray(arr, len) { if (len =
           new XVolbar(this, ctx, volumeData, _barData);
         }
       }
-
       var _iterator = XOhlcBarsvue_type_script_lang_js_createForOfIteratorHelper(cnv.ohlcbars),
-          _step;
-
+        _step;
       try {
         for (_iterator.s(); !(_step = _iterator.n()).done;) {
           var barData = _step.value;
           new XOhlcBar(this, ctx, barData);
-        } //if (this.price_line) this.price.draw(ctx)  // TODO:
+        }
 
+        //if (this.price_line) this.price.draw(ctx)  // TODO:
       } catch (err) {
         _iterator.e(err);
       } finally {
@@ -4119,9 +3873,6 @@ var XOhlcBars_component = normalizeComponent(
   
 )
 
-/* hot reload */
-if (false) { var XOhlcBars_api; }
-XOhlcBars_component.options.__file = "src/overlays/XOhlcBars/XOhlcBars.vue"
 /* harmony default export */ const XOhlcBars = (XOhlcBars_component.exports);
 ;// CONCATENATED MODULE: ./src/index_prod.js
 // -------- Production overlay index ---------
@@ -4130,6 +3881,7 @@ XOhlcBars_component.options.__file = "src/overlays/XOhlcBars/XOhlcBars.vue"
 // Do not commit this file, the final index is
 // compiled by the repo owner, use index_dev.js to
 // experiment: 'npm run compile'
+
 
 
 
@@ -4204,11 +3956,9 @@ var Pack = {
   WilliamsR: WilliamsR,
   XOhlcBars: XOhlcBars
 };
-
 if (typeof window !== 'undefined' && window.Vue) {
   window.TvjsOverlays = Pack;
 }
-
 /* harmony default export */ const index_prod = (Pack);
 
 })();
